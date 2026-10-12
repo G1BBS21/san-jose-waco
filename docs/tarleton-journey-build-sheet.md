@@ -15,6 +15,8 @@ This sheet lists every image block still to build or fix, with alt text and clic
 | `{slug}` | tarleton |
 | `{MENS_RING_URL}` | https://www.sanjosewaco.com/products/tarleton-mens-ring |
 | `{EVENT_URL}` | https://www.sanjosewaco.com/blogs/jewelry-talk/tarleton-state-university-ring-event |
+| `{SCHOOL_RINGS_URL}` | https://www.sanjosewaco.com/collections/tarleton-state-university-graduation-seal-rings |
+| `{CATTLETAG_URL}` | https://www.sanjosewaco.com/products/tarleton-university-belt-buckle-cattle-tag-pendants |
 
 ## UTM convention (unchanged from section 4.2)
 
@@ -25,7 +27,7 @@ Add to every sanjosewaco.com and wacodiamonds.com click-through:
 
 Social profile links get no UTMs.
 
-## Base URLs (from the 2026-10-12 site fetch, re-verify before publishing)
+## Base URLs (all return HTTP 200 as of 2026-10-12)
 
 | Key | URL |
 |---|---|
@@ -36,6 +38,9 @@ Social profile links get no UTMs.
 | REVIEWS | https://www.sanjosewaco.com/pages/san-jose-jewelers-reviews |
 | WARRANTY | https://www.sanjosewaco.com/pages/warranty |
 | CONTACT | https://www.sanjosewaco.com/pages/contact-us-today |
+| ABOUT | https://www.sanjosewaco.com/pages/about |
+| TARLETON_RINGS | https://www.sanjosewaco.com/collections/tarleton-state-university-graduation-seal-rings |
+| TARLETON_CATTLETAG | https://www.sanjosewaco.com/products/tarleton-university-belt-buckle-cattle-tag-pendants |
 | APPOINTMENT | https://www.sanjosewaco.com/pages/schedule-an-appointment |
 | WACO_DIAMONDS | https://www.wacodiamonds.com/ |
 | INSTAGRAM | https://www.instagram.com/sanjosejewelry/ |
@@ -48,7 +53,7 @@ Remove the stand-in Email 01 layout, then build:
 
 | # | Graphic | Alt text | Click-through |
 |---|---|---|---|
-| 1 | The San Jose Story | The San Jose Story: a family-owned Waco jeweler crafting custom university rings | CONTACT + `?utm_source=attentive&utm_medium=email&utm_campaign=tarleton_welcome_04` |
+| 1 | The San Jose Story | The San Jose Story: a family-owned Waco jeweler crafting custom university rings | ABOUT + `?utm_source=attentive&utm_medium=email&utm_campaign=tarleton_welcome_04` |
 | 2 | Care Beyond the Purchase | Care Beyond the Purchase: ring care and warranty from San Jose Jewelers | WARRANTY + `…tarleton_welcome_04` |
 | 3 | Your Ring. Our Personal Touch | Your Ring. Our Personal Touch. Personal help from the San Jose Jewelers team | CONTACT + `…tarleton_welcome_04` |
 | – | Footer (keep) | – | – |
@@ -57,7 +62,7 @@ Remove the stand-in Email 01 layout, then build:
 
 | # | Graphic | Alt text | Click-through |
 |---|---|---|---|
-| 1 | Cattletags & Western Jewelry | Cattletags and western jewelry from San Jose Jewelers | **TBD**: no collection URL confirmed; ask Chase |
+| 1 | Cattletags & Western Jewelry | Cattletags and western jewelry from San Jose Jewelers TARLETON_CATTLETAG + `…tarleton_welcome_05` (Tarleton belt buckle & cattle tag pendants; the site has no general western collection) |
 | 2 | Custom Necklace Builder | Design a custom Tarleton necklace in our pendant builder | PENDANT_BUILDER + `…tarleton_welcome_05` |
 | 3 | Waco Diamonds | Waco Diamonds, our sister store for fine diamond jewelry | WACO_DIAMONDS + `…tarleton_welcome_05` |
 | 4 | Follow Us On Our Socials | Follow San Jose Jewelers on Instagram, Facebook, TikTok and Pinterest | INSTAGRAM (an image block holds one link; for all four, add a Social block or slice the graphic) |
@@ -68,10 +73,10 @@ The images are swapped already. The click-through links are still the old ones, 
 
 | Email | Graphic | Alt text | Recommended link |
 |---|---|---|---|
-| 01 | Your Tarleton Story. Your Style. | Your Tarleton Story. Your Style. Custom Tarleton rings from San Jose Jewelers | current Tarleton collection link |
-| 01 | The Tarleton Collection | The Tarleton Collection of customizable class rings | current Tarleton collection link |
+| 01 | Your Tarleton Story. Your Style. | Your Tarleton Story. Your Style. Custom Tarleton rings from San Jose Jewelers | TARLETON_RINGS (or the current Tarleton link) |
+| 01 | The Tarleton Collection | The Tarleton Collection of customizable class rings | TARLETON_RINGS (or the current Tarleton link) |
 | 01 | The San Jose Experience | The San Jose Experience: family-owned, personal service in Waco | CONTACT |
-| 01 | Two Seals. Your Tarleton Pride. | Two Seals. Your Tarleton Pride. Choose your Tarleton seal | current Tarleton collection link |
+| 01 | Two Seals. Your Tarleton Pride. | Two Seals. Your Tarleton Pride. Choose your Tarleton seal | TARLETON_RINGS (or the current Tarleton link) |
 | 01 | Something For The Guys | Something for the guys: Tarleton men's rings | `{MENS_RING_URL}` |
 | 02 | Your Tarleton Ring. Two Ways. | Your Tarleton Ring, Two Ways: build your own or start from a design | BUILDER |
 | 02 | 3D Ring Builder | Build your Tarleton ring in our 3D ring builder | BUILDER |
@@ -93,7 +98,7 @@ Each one copies the Email-only email listed below, with the same graphics, alt t
 | 02 | Email-only 02 | |
 | 03 | Email-only 03 | |
 | 04 | **From Our Customers** (single graphic) | Alt: "From our customers: reviews from Tarleton graduates". Link: REVIEWS. Use only the approved graphic and don't add any other review text |
-| 05 | Email-only 05 | Same TBD Cattletags link |
+| 05 | Email-only 05 | |
 
 ## Text-only 1 MMS image
 
@@ -110,6 +115,5 @@ Best guess is **Your Tarleton Story. Your Style.** Confirm with Chase before swa
 - Both branch: Email 01 → Email 02 → Text 1 all go out within about 2 days. Spread them out?
 - The Else branch sends nothing. Is that intended?
 - The exit rule hasn't been inspected yet.
-- The site says both "since 1985" and "over 35 years". Which claim should we use?
-- Cattletags link target.
+- The About page and homepage say "since 1985", so use that rather than "over 35 years".
 - Time-sensitive: Christmas order cutoff is 10/18/26 and the Tarleton Ring Event is 10/21/26. Mention them anywhere?
